@@ -1,4 +1,6 @@
 export const A = (name) => `${import.meta.env.BASE_URL}assets/${name}`
+// Absolute URL for use inside CSS url() vars, which browsers resolve against the stylesheet, not the page
+export const AU = (name) => new URL(A(name), document.baseURI).href
 
 export const CATEGORIES = [
   { id: 'entradas', name: 'Entradas', tagline: 'El inicio perfecto.', image: 'cat-entradas.jpg', icon: 'bowl' },

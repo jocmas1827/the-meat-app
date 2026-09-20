@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { StoreProvider, ToastProvider, useStore } from './store'
-import { A } from './data'
+import { AU } from './data'
 import { TabBar, ToastHost, navHistory } from './components/ui'
 import Splash from './screens/Splash'
 import Home from './screens/Home'
@@ -60,7 +60,7 @@ export default function App() {
     <StoreProvider>
       <ToastProvider>
         <HashRouter>
-          <div className="stage" style={{ '--tex': `url(${A('textura-carbon.jpg')})` }}>
+          <div className="stage" style={{ '--tex': `url(${AU('textura-carbon.jpg')})` }}>
             <div className="device" id="device">
               <Screens />
             </div>

@@ -2,7 +2,7 @@ import { forwardRef, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
-import { A, money } from '../data'
+import { A, AU, money } from '../data'
 import { useStore, useToast } from '../store'
 import { Back, Calendar, Cart, Check, Heart, Home, MenuIcon, Minus, Plus, User } from '../icons'
 
@@ -488,7 +488,7 @@ export function Embers({ density = 42, className = '' }) {
 /* ---------- Smoke layer ---------- */
 export function Smoke({ opacity = 0.14 }) {
   return (
-    <div className="smoke" aria-hidden="true" style={{ '--smoke-opacity': opacity, '--smoke-img': `url(${A('overlay-humo.png')})` }}>
+    <div className="smoke" aria-hidden="true" style={{ '--smoke-opacity': opacity, '--smoke-img': `url(${AU('overlay-humo.png')})` }}>
       <span className="smoke__layer smoke__layer--a" />
       <span className="smoke__layer smoke__layer--b" />
     </div>
